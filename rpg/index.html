@@ -1,7 +1,11 @@
 <!DOCTYPE html>
 <html>
   <head>
+<<<<<<< HEAD
     <title>Bootstrap 101 Template</title>
+=======
+    <title>Sonic Adventures</title>
+>>>>>>> RPG Files
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Bootstrap -->
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
@@ -9,6 +13,7 @@
     <!-- My CSS -->
     <link rel="stylesheet" href="rpg.css">
   </head>
+<<<<<<< HEAD
   <body>
     <div class="container">
       <div class="row">
@@ -31,11 +36,119 @@
           </select>
         </div>
         <div class="col-md-4">
+=======
+  <body <!--background="http://images.wikia.com/sonic/images/6/66/Sonic_Heroes_Artwork_-_Logo_(No_Text).png"-->>
+    <div class="container">
+      <div class="row">
+	    <h1 align="center"><font face="comic sans ms" color="blue"><b>SONIC ADVENTURES</b></font></h1>
+        <p class="lead text-info">
+          Characters
+        </p>
+          Choose a character from the list below, then click the appropriate button.
+      </div>
+      <div class="row">
+        <div class="col-md-4">
+		  <p><font face="comic sans ms" color="Blue"><b>HEROES</b></font></p>
+			<div class="radio">
+				<label>
+					<input type="radio" name="optionsRadios" id="optionsRadios1" value="Sonic" checked>
+						Sonic The Hedgehog
+				</label>
+			</div>
+			<div class="radio">
+				<label>
+					<input type="radio" name="optionsRadios" id="optionsRadios1" value="Tails" checked>
+						Miles "Tails" Prower
+				</label>
+			</div>
+			<div class="radio">
+				<label>
+					<input type="radio" name="optionsRadios" id="optionsRadios1" value="Knuckles" checked>
+						Knuckles The Echidna
+				</label>
+			</div>
+			<div class="radio">
+				<label>
+					<input type="radio" name="optionsRadios" id="optionsRadios1" value="Silver" checked>
+						Silver The Hedgehog
+				</label>
+			</div>
+			<div class="radio">
+				<label>
+					<input type="radio" name="optionsRadios" id="optionsRadios1" value="Blaze" checked>
+						Blaze The Cat
+				</label>
+			</div>
+		  
+         <!-- <select multiple class="form-control1">
+            <option value="Sonic">Sonic The Hedgehog</option>
+            <option value="Tails">Miles "Tails" Prower</option>
+            <option value="Knuckles">Knuckles The Echidna</option>
+			<option value="Silver">Silver The Hedgehog</option>
+			<option value="Blaze">Blaze The Cat</option>
+          </select>
+		  -->
+        </div>
+		<div class="col-md-4">
+		  <p><font face="comic sans ms" color="RED"><b>VILLAINS</b></font></p>
+			<div class="radio">
+				<label>
+					<input type="radio" name="optionsRadios" id="optionsRadios1" value="Shadow" checked>
+						Shadow The Hedgehog
+				</label>
+			</div>
+			<div class="radio">
+				<label>
+					<input type="radio" name="optionsRadios" id="optionsRadios1" value="Espio" checked>
+						Espio The Chameleon
+				</label>
+			</div>
+			<div class="radio">
+				<label>
+					<input type="radio" name="optionsRadios" id="optionsRadios1" value="Rogue" checked>
+						Rogue The Bat
+				</label>
+			</div>
+			<div class="radio">
+				<label>
+					<input type="radio" name="optionsRadios" id="optionsRadios1" value="Jet" checked>
+						Jet The Hawk
+				</label>
+			</div>
+			<div class="radio">
+				<label>
+					<input type="radio" name="optionsRadios" id="optionsRadios1" value="Eggman" checked>
+						Dr. Eggman
+				</label>
+			</div>          
+		  <!--<select multiple class="form-control1">
+            <option value="Shadow">Shadow The Hedgehog</option>
+			<option value="Espio">Espio The Chameleon</option>
+			<option value="Rouge">Rogue The Bat</option>
+			<option value="Jet">Jet The Hawk</option>
+			<option value="Eggman">Dr. Eggman</option>
+          </select> -->
+        </div>
+        <div class="col-md-4">
+		  <div class="row">
+            <a id="play-button" class="btn btn-lg btn-primary btn-block">Play</a>
+          </div>
+		  <div class="row">
+			<a id="default-button" data-toggle= "modal" href="#randomModal" class="btn btn-lg btn-default btn-block">Random Character</a>
+		  </div>
+>>>>>>> RPG Files
           <div class="row">
             <a id="create-button" data-toggle="modal" href="#createModal" class="btn btn-lg btn-success btn-block">Create</a>
           </div>
           <div class="row">
+<<<<<<< HEAD
             <a class="btn btn-info btn-lg btn-block" href="character.html">Edit</a>
+=======
+            <a class="btn btn-info btn-lg btn-block" href="character.html">View/Edit</a>
+          </div>
+		  <div class="row">
+            <a id="create-button" data-toggle="modal" href="#itemModal" class="btn btn-lg btn-default btn-block">Spawn Item</a>
+>>>>>>> RPG Files
           </div>
           <div class="row">
             <a id="delete-button" data-toggle="modal" href="#deleteModal" class="btn btn-lg btn-danger btn-block">Delete</a>
@@ -45,6 +158,56 @@
     </div>
 
   <!-- Modal -->
+<<<<<<< HEAD
+=======
+  <div class="modal fade" id="randomModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-backdrop="static">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">Enter Attributes to find a random character!</h4>
+        </div>
+        <div class="modal-body">
+			<form role="form">
+			<div class="form-group">
+				<label for="Strength">Strength</label>
+				<input type="number" min="1" max="20" class="form-control" id="StrengthAtt" placeholder="Strength: 1-20">
+			</div>
+			<div class="form-group">
+				<label for="Speed">Speed</label>
+				<input type="number"min="1" max="20" class="form-control" id="SpeedAtt" placeholder="Speed: 1-20">
+			</div>
+			<div class="form-group">
+				<label for="Health">Health</label>
+				<input type="number" min="1" Max="20" class="form-control" id="HealthAtt" placeholder="Health: 1-20">
+			</div>
+			<div class="form-group">
+				<label for="Special">Special</label>
+				<input type="Text" class="form-control" id="HealthAtt" placeholder="e.g. Supersonc Speed, Time Warp, etc.">
+			</div>
+			<label for="CharacterType">Type of Character</label>
+			<select class="form-control">
+				<option>Bat</option>
+				<option>Cat</option>
+				<option>Chameleon</option>
+				<option>Echidna</option>
+				<option>Hawk</option>
+				<option>Hedgehog</option>
+				<option>Human</option>
+				<option>Fox</option>
+			</select>
+		</div>
+		</form>
+        </div>
+        <div class="modal-footer">
+			<button type="Cancel" class="btn btn-default" data-dismiss="modal">Cancel</button>
+			<button id="confirm-random-button" type="Randomize" class="btn btn-info">Randomize</button>
+        </div>
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div><!-- /.modal -->
+  
+  <!-- Modal -->
+>>>>>>> RPG Files
   <div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-backdrop="static">
     <div class="modal-dialog">
       <div class="modal-content">
@@ -70,6 +233,7 @@
           <h4 class="modal-title">Create Character</h4>
         </div>
         <div class="modal-body">
+<<<<<<< HEAD
           <p>Please select the desired information to create your character.</p>
 
           <select class="form-control">
@@ -83,6 +247,67 @@
         <div class="modal-footer">
           <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
           <button id="confirm-delete-button" type="button" class="btn btn-success">Create Character</button>
+=======
+          <p>Input the desired information to create your character.</p>
+		  	<div class="form-group">
+				<label for="Name">Name</label>
+				<input type="name" class="form-control" id="name" placeholder="Name">
+			</div>
+			<div class="form-group">
+				<label for="Strength">Strength</label>
+				<input type="number" min="1" max="20" class="form-control" id="StrengthAtt" placeholder="Strength: 1-20">
+			</div>
+			<div class="form-group">
+				<label for="Speed">Speed</label>
+				<input type="number"min="1" max="20" class="form-control" id="SpeedAtt" placeholder="Speed: 1-20">
+			</div>
+			<div class="form-group">
+				<label for="Health">Health</label>
+				<input type="number" min="1" Max="20" class="form-control" id="HealthAtt" placeholder="Health: 1-20">
+			</div>
+			<div class="form-group">
+				<label for="Special">Special</label>
+				<input type="Text" class="form-control" id="HealthAtt" placeholder="e.g. Supersonc Speed, Time Warp, etc.">
+			</div>
+			<label for="CharacterType">Type of Character</label>
+			<select class="form-control">
+				<option>Bat</option>
+				<option>Cat</option>
+				<option>Chameleon</option>
+				<option>Echidna</option>
+				<option>Hawk</option>
+				<option>Hedgehog</option>
+				<option>Human</option>
+				<option>Fox</option>
+			</select>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+          <button id="confirm-create-button" type="button" class="btn btn-success">Create Character</button>
+        </div>
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div><!-- /.modal -->
+  
+  <!-- Modal -->
+  <div class="modal fade" id="itemModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-backdrop="static">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">Spawn Item</h4>
+        </div>
+        <div class="modal-body">
+          <p>One of these items will be randomly spawned.</p>
+		  <ul>
+			<li>Rings</li>
+			<li>Speed Shoes</li>
+			<li>Shield</li>
+			<li>Chaos Emerald</li>
+		  </ul>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+          <button id="confirm-item-button" type="button" class="btn btn-info">Spawn Item</button>
+>>>>>>> RPG Files
         </div>
       </div><!-- /.modal-content -->
     </div><!-- /.modal-dialog -->
@@ -97,4 +322,8 @@
     <!-- Code specific to our RPG user interface. -->
     <script src="rpg.js"></script>
   </body>
+<<<<<<< HEAD
 </html>
+=======
+</html>
+>>>>>>> RPG Files
