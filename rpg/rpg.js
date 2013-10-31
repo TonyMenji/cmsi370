@@ -9,8 +9,6 @@ $(function () {
     });
 
 });
-<<<<<<< HEAD
-=======
 
 $(function () {
 
@@ -37,7 +35,7 @@ $(function () {
 $(function () {
 
     $("#confirm-edit-button").click(function () {
-        console.log("Randomize confirmed!!!!!");
+        console.log("Edit confirmed!!!!!");
 
         // Now we dismiss the dialog.
         $('#editModal').modal('hide');
@@ -55,4 +53,14 @@ $(function () {
     });
 
 });
->>>>>>> RPG Files
+
+$(function () {
+
+    $("#confirm-editcharacter-button").click(function () {
+        console.log("Edit confirmed!!!!!");
+
+        // Now we dismiss the dialog.
+        $('#editcharacterModal').modal('hide');
+    });
+
+});
