@@ -21,15 +21,26 @@
       </div>
       <div class="row">
         <div class="col-md-4">
+          <!-- JD: Bzzzzt: characteristics like font and color strictly belong
+                   in CSS, by modern web standards.  You must have consulted some
+                   pretty obsolete references for this code. -->
 		  <p><font face="comic sans ms" color="Blue"><b>HEROES</b></font></p>
 			<div class="radio">
+              <!-- JD: Your indentation size changes here from 2 spaces to 4.
+                       Not horrible (and certainly better than not indenting at all or
+                       indenting incorrectly), but full consistency still looks better. -->
 				<label>
+                    <!-- JD: Even if this is a mockup, you should still come up with
+                             descriptive identifiers and names.  "optionsRadios" is
+                             not that. -->
 					<input type="radio" name="optionsRadios" id="optionsRadios1" value="Sonic" checked>
 						Sonic The Hedgehog
 				</label>
 			</div>
 			<div class="radio">
 				<label>
+                    <!-- JD: IDs are supposed to be unique; thus, you should change all other
+                             id="optionsRadios1" in your page. -->
 					<input type="radio" name="optionsRadios" id="optionsRadios1" value="Tails" checked>
 						Miles "Tails" Prower
 				</label>
@@ -54,9 +65,11 @@
 			</div>
         </div>
 		<div class="col-md-4">
+          <!-- JD: Ditto more obsolete HTML that should be CSS instead. -->
 		  <p><font face="comic sans ms" color="RED"><b>VILLAINS</b></font></p>
 			<div class="radio">
 				<label>
+                    <!-- JD: Same issues here regarding naming and IDs. -->
 					<input type="radio" name="optionsRadios" id="optionsRadios1" value="Shadow" checked>
 						Shadow The Hedgehog
 				</label>
@@ -110,6 +123,7 @@
     </div>
 
   <!-- Modal -->
+  <!-- JD: This should be indented at the same level as the above div. -->
   <div class="modal fade" id="randomModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-backdrop="static">
     <div class="modal-dialog">
       <div class="modal-content">
@@ -117,10 +131,12 @@
           <h4 class="modal-title">Random Character</h4>
         </div>
         <div class="modal-body">
-		    <p>Input the desired information to find a random character.</p>		
+		    <p>Input the desired information to find a random character.</p>
 			<form role="form">
+              <!-- JD: You should indent one level here, because you are "inside" the form element. -->
 			<div class="form-group">
 				<label for="Strength">Strength</label>
+                <!-- JD: You found type="number": that is a good find, very convenient for these fields! -->
 				<input type="number" min="1" max="20" class="form-control" id="StrengthAtt" placeholder="Strength: 1-20">
 			</div>
 			<div class="form-group">
@@ -146,6 +162,11 @@
 				<option>Human</option>
 				<option>Fox</option>
 			</select>
+
+            <!-- JD: It's a little surprising to see the above elements for a "random" modal:
+                     wouldn't those attributes be randomly selected also?  If anything, the one
+                     thing for the user to enter when a character is created at random should be
+                     the name, right? -->
 		</form>
         </div>
         <div class="modal-footer">
@@ -247,6 +268,8 @@
       </div><!-- /.modal-content -->
     </div><!-- /.modal-dialog -->
   </div><!-- /.modal -->
+
+    <!-- JD: No help functionality seen in your submission. -->
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="//code.jquery.com/jquery.js"></script>

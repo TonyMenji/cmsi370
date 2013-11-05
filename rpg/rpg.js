@@ -1,4 +1,6 @@
 // Big things have small beginnings...
+
+// JD: No Ajax code seen.
 $(function () {
 
     $("#confirm-delete-button").click(function () {
@@ -10,6 +12,8 @@ $(function () {
 
 });
 
+// JD: No need for different $(function () { }) blocks here; these can all
+//     go under the same one.
 $(function () {
 
     $("#confirm-create-button").click(function () {
@@ -21,6 +25,11 @@ $(function () {
 
 });
 
+// JD: Although you did hook up all of the modal buttons, it is the same
+//     hookup all around.  It would have been good to see some variety
+//     in what these modals did upon confirmation (e.g., delete confirmation
+//     could have actually deleted the selected character---you can still
+//     do that in a mockup).
 $(function () {
 
     $("#confirm-random-button").click(function () {

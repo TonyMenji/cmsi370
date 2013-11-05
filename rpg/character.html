@@ -10,11 +10,13 @@
     <link rel="stylesheet" href="rpg.css">
   </head>
   <body>
+    <!-- JD: This h1 should be indented; and separation of concerns is also violated here. -->
   <h1 align="center"><font face="comic sans ms" color="blue"><b>CHARACTERS</b></font></h1>
     <div class="container">
       <div class="row">
         <div class="col-md-4">
           <!-- Can't draw anything yet, so... -->
+          <!-- JD: You could have used placehold.it! -->
 		  <h2>Sonic The Hedgehog</h2>
           <table class="table table-striped">
             <thead>
@@ -49,6 +51,9 @@
 		  <div class="row">
 			<a id="default-button" data-toggle= "modal" href="#editcharacterModal" class="btn btn-lg btn-default btn-block">Edit</a>
 		  </div>
+
+          <!-- JD: Based on how you set things up, this page should be a *single* character screen.
+                   Thus, copy/pasting all of these other characters really doesn't do much. -->
           <h2>Miles "Tails" Prower</h2>
           <table class="table table-striped">
             <thead>
@@ -364,6 +369,9 @@
     </div>
 	
   <!-- Modal -->
+    <!-- JD: Nice that you added this modal here, but at this point it is just
+             that much more copied code.  You should have gone for more variety,
+             less copying. -->
   <div class="modal fade" id="editcharacterModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-backdrop="static">
     <div class="modal-dialog">
       <div class="modal-content">
@@ -416,6 +424,7 @@
     <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
 	
 	<!-- Code Specific to the Characters page-->
+    <!-- JD: But it isn't yet, apparently. -->
 	<script src="rpg.js"></script>
   </body>
 </html>
