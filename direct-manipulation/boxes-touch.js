@@ -35,6 +35,26 @@ var BoxesTouch = {
 			touch.target.initialY = touch.pageY;
 			
 			//Create new box
+            // JD: Alternatively, you can define this "template" as a standalone
+            //     string at the top, then set its attributes via jQuery, e.g.:
+            //
+            //     ...
+            //     TEMP_BOX_TEMPLATE: '<div class="box"></div>';
+            //
+            //     ...
+            //
+            //     var tempBox = $(BoxesTouch.TEMP_BOX_TEMPLATE).css({
+            //         width: "0px",
+            //         height: "0px",
+            //         left: touch.pageX + "px",
+            //         top: touch.pageY + "px"
+            //     });
+            //
+            //     ...
+            //
+            //     You may find this approach to be a little more readable and
+            //     less error-prone.
+            //
 			var newtemp = '<div class="box" style="width: 0px; height: 0px; left:' + touch.pageX + 'px; top: ' + touch.pageY + 'px">' +
 				'</div>';
 			var newbox = newtemp;
@@ -71,12 +91,17 @@ var BoxesTouch = {
 				
 				
 			//Delete Box
+            // JD: Functional, but with some drawing area hardcoding.
+            //     And you should add a space between your "if" token and
+            //     the parenthesized condition.
 			if(!((touch.target.movingBox).hasClass("delete-box")) &&
 				(touch.pageX - touch.target.deltaX > 512 ||
 				 touch.pageY - touch.target.deltaY > 512 ||
 				 touch.pageX - touch.target.deltaX < 0 ||
 				 touch.pageY - touch.target.deltaY < 0))
-				 {
+				 { // JD: Even with a multiline if condition I would stick the
+                   //     opening { on the prior line.  This lets your preserve
+                   //     the single-level indenting.
 					(touch.target.movingBox).addClass("delete-box delete-highlight");
 				}	
 			if(((touch.target.movingBox).hasClass("delete-box")) &&
@@ -90,7 +115,18 @@ var BoxesTouch = {
 			}
 			
 			//Create Box
+            // JD: Watch your naming!!!  Look REALLY CAREFULLY at the line below,
+            //     and compare it to the rest of the code that refers to the box
+            //     being created.
 			if (touch.target.creationbox) {
+                // JD: Next, recall that the touch target here is the *drawing area*, not
+                //     the individual boxes.  Thus, you need a different scheme for tracking
+                //     the box that is being created because there can be more than one
+                //     such box.  Hint: All touch objects have a guaranteed-unique and
+                //     stable identifier.
+                //
+                //     Also, same formatting comment here about a space between "if"
+                //     and its condition.
 				if(touch.pageX < touch.target.initialX) {
 					touch.target.creatingbox.offset({
 						left: touch.pageX,
@@ -150,10 +186,11 @@ var BoxesTouch = {
      */
     unhighlight: function () {
         $(this).removeClass("box-highlight");
-		
+
 		if ($(this).hasClass("delete-box")) {
 			$(this).remove();
 		}
+        // JD: Why is this here?  Copy-paste artifact...?
 		$(this).removeClass("box-highlight");
     },
 
