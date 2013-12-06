@@ -43,7 +43,7 @@ var BoxesTouch = {
             //
             //     ...
             //
-            //     var tempBox = $(BoxesTouch.TEMP_BOX_TEMPLATE).css({
+            //     var newtemp = $(BoxesTouch.TEMP_BOX_TEMPLATE).css({
             //         width: "0px",
             //         height: "0px",
             //         left: touch.pageX + "px",
@@ -58,6 +58,7 @@ var BoxesTouch = {
 			var newtemp = '<div class="box" style="width: 0px; height: 0px; left:' + touch.pageX + 'px; top: ' + touch.pageY + 'px">' +
 				'</div>';
 			var newbox = newtemp;
+            // JD: Ack---you hardcoded #drawing-area!
 			$("#drawing-area").append(newbox);
 			$("#drawing-area").addClass("just-started");
 			(touch.target.creatingbox) = $("div div:last-child");
