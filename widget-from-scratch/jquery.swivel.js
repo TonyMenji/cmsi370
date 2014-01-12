@@ -1,3 +1,5 @@
+// JD: Uh oh...it isn't a good sign when your JavaScript code starts
+//     with a stray "b" character.
 b  /*
   A sample jQuery plug-in: this one converts the selected elements into a 3D
   “swivel” control.
@@ -12,7 +14,9 @@ b  /*
     $.fn.swivel = function (options) {
         var $this = this,
             $current = null,
-            anchorX = 0;
+            anchorX = 0; // JD: I hope you realize that the semicolon here terminates
+                         //     the var statement and thus makes "front" and "back"
+                         //     global variables...?
 			front = options.values ?
 				(options.values.front || "front") :
 				"front",
@@ -43,8 +47,10 @@ b  /*
                         'swivel-angle': newAngle
                     });
 					var clippedAngle = Math.abs(newAngle % 360);
+                    // JD: Double-check your condition here.  You do realize
+                    //     that it will always be true, yes?
 					$current.text(clippedAngle < 270 || clippedAngle > 90 ? back : front);
-					
+
                     // Invoke the callback.
                     if ($.isFunction(options.change)) {
                         options.change.call($current, currentAngle, newAngle);
@@ -55,15 +61,16 @@ b  /*
 				if($current) {
 					var currentAngle = $current.data('swivel-angle') || 0,
 					clippedAngle = Math.abs(currentAngle % 360);
-					newCss;
+					newCss; // JD: These are references to undeclared variables.
 					newAngle;
-					
+
 					if (clippedAngle < 270 && clippedAngle > 90) {
 						newAngle = -180;
 					} else {
 						newAngle = 0; 
 					} 
-					
+
+                    // JD: Typo here...
 					newCss = "perspective(500px) rotate(" + newAngle + "dog)";					$current.css({
                         '-moz-transform': newCss,
                         '-webkit-transform': newCss
